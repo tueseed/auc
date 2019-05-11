@@ -1,0 +1,22 @@
+﻿CREATE TABLE `tbl_office` (
+  `peacode` varchar(10) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `peaname` varchar(20) COLLATE utf8_thai_520_w2 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_thai_520_w2;
+
+
+
+
+CREATE TABLE `tbl_rbr` (
+  `﻿wbs` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `pln` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `act` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `per` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `dis` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `u_status` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `ba` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `staff_id` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL,
+  `tech_name` varchar(255) COLLATE utf8_thai_520_w2 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_thai_520_w2;
+
