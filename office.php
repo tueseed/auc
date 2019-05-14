@@ -69,16 +69,19 @@
 
 </div>
 <div class="row">
-    <div class="col-lg-12 mb-2" >
+
+    <div class="col-lg-6 mb-2" >
         <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <canvas id="myBarChart"></canvas>
-                    </div>
-                    <div class="col-lg-6">
+            <div class="card-body chart-container">
+                <canvas id="myBarChart"></canvas>   
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-2" >
+        <div class="card">
+            <div class="card-body chart-container">
                         <canvas id="myPieChart"></canvas>
-                    </div>
                 </div>
             </div>
         </div>
