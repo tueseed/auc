@@ -1,6 +1,6 @@
 <div class="row">
 
-    <a class="col-lg-4 mb-4" href="?action=homes">
+    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=A">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -16,7 +16,7 @@
         </div>
     </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=B">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -30,9 +30,9 @@
             </div>
             <div class="overlay">PEAN2</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=C">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -46,7 +46,7 @@
             </div>
             <div class="overlay">PEAN3</div>
         </div>
-    </div>
+    </a>
 
     <div class="col-lg-4 mb-4">
         <div class="card">

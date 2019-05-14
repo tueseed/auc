@@ -23,10 +23,24 @@
       <!-- Image and text -->
       <nav class="shadow-sm navbar navbar-light bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand font-weight-bold" href="#!">
+          <a class="navbar-brand font-weight-bold" href="?action=rg">
             <img src="./assets/images/pea-logo.png" width="100" class="d-inline-block align-top" alt="">
             โปรแกรมติดตามงานก่อสร้างระบบไฟฟ้า
           </a>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+              <span class="header text-dark font-weight-bold text-center" id="user_logged">
+                ยังไม่ได้เข้าสู่ระบบ
+                <img src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" width="75" height="50">
+              </span>
+            </a>
+            <div class="dropdown-menu">
+              <img src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" width="75" height="50">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>

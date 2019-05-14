@@ -1,7 +1,7 @@
 function call_auth()
 {
-    var UserName = document.getElementById("UserName").value;
-    var PassWord = document.getElementById("PassWord").value;
+    var UserName = document.getElementById("employeeCode").value;
+    var PassWord = document.getElementById("employeePassword").value;
     var formData = new FormData();
 	formData.append('UserName',UserName);
 	formData.append('PassWord',PassWord);
@@ -16,12 +16,12 @@ function call_auth()
             statusCode:{
                 500:function()
                             {
-                                $("#login_alert").html("**เกิดความผิดพลาดในการเข้าสู่ระบบ**");
+                                //$("#login_alert").html("**เกิดความผิดพลาดในการเข้าสู่ระบบ**");
                                 console.log("500");
                             },
                 401:function()
                             {
-                                $("#login_alert").html("**เกิดความผิดพลาดในการเข้าสู่ระบบ**");
+                                //$("#login_alert").html("**เกิดความผิดพลาดในการเข้าสู่ระบบ**");
                                 console.log("401");
                             }
             },
@@ -29,7 +29,7 @@ function call_auth()
             {
                 //$.blockUI({message : '<h1>กำลังเข้าสู่ระบบ</h1>'});
                 console.log("beforesend.....");
-                $.blockUI({
+                /*$.blockUI({
                     message: '<div class="spinner-border text-pea display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div><br/><h1 class="font-weight-bold text-pea">กำลังเข้าสู่ระบบ.......</h1>',
                     overlayCSS : { 
                       backgroundColor: '#ffffff',
@@ -39,7 +39,7 @@ function call_auth()
                       opacity: 1,
                       border: 'none',
                     }
-                  });
+                  });*/
             },
 			success: function(response) {
                         var obj = JSON.parse(response) || {};
@@ -52,13 +52,13 @@ function call_auth()
                 var session  = JSON.parse(sessionStorage.getItem('data'));
                 var office =(session.BaCode).substr(0,1);
                 var num_code = (session.BaCode).substr(1,3);
-                $.unblockUI();
+                //$.unblockUI();
                 if(session !== null)
                 {
                     console.log((session.BaCode).substr(0,1) + " From Complete fn..");
                     if(office == 'Z' || session.EmployeeId == '00500290')
                     {
-                        window.location.href = "rg.php";
+                        window.location.href = "?action=rg";
                     }
                     else if(num_code == '000')
                     {
@@ -73,4 +73,4 @@ function des_session()
 {
     sessionStorage.removeItem('data');
 }
-var session  = JSON.parse(sessionStorage.getItem('data'));
+

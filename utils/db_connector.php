@@ -5,15 +5,12 @@
 
   // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-  $server = 'localhost';
-  $username = 'dev';
-  $password = 'dev';
-  $db = 'crm_bu';
-  // $server = $url["host"];
-  // $username = $url["user"];
-  // $password = $url["pass"];
-  // $db = substr($url["path"], 1);
-
+  $server = "localhost";
+	$username = "root";
+	$password = "";
+	$db = "pythondb";
+	
+	
   $conn = new mysqli($server, $username, $password, $db);
 
 	// $conn = mysqli_connect($serverName, $userName, $userPassword, $dbName, $db_port) or die('Unable to establish a CRM_BU connection');

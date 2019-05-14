@@ -39,7 +39,7 @@ function getUrlVars() {
 function card_render(peaname)
 {
     var card_area = document.getElementById("card_area")
-    card_area.innerHTML = card_area.innerHTML + '<div class="col-xl-4 col-md-6 col-lg-4 mb-4"><a class="card border-left-pea shadow h-100 py-2" href="#"><div class="card-body"><div class="row no-gutters align-items-center"><div class="col mr-2"><div class="text-md font-weight-bold text-pea text-uppercase mb-1"><h1>'+peaname+'</h1></div></div><div class="col-auto"><i class="fas fa-building fa-4x" style="color:#703E91"></i></div></div></div></a></div>';
+    card_area.innerHTML = card_area.innerHTML + '<a class="col-lg-4 mb-4" href="#"><div class="card"><div class="card-body"><div class="row"><div class="col mr-2"><h3>'+peaname+'</h3></div><div class="col-auto"><i class="fas fa-building fa-4x"></i></div></div></div><div class="overlay">Click.</div></div></a>';
 }
 var hub_code = getUrlVars()["hub_code"];
 var formdata = new FormData();
