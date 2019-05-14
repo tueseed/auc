@@ -1,5 +1,5 @@
 <?php
-	require('../connect-db.php');
+	require('../utils/db_connector.php');
 	// case1
 	$sql_case1 = "SELECT * FROM tbl_rbr WHERE DATEDIFF(NOW(),date) > 180 AND per > 70 AND (status LIKE '%CLSD%' OR status LIKE '%REL%')";
 	$query_case1 = mysqli_query($conn,$sql_case1);

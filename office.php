@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col mr-2">
                         <h5>งานก่อสร้างค้างนานเกิน 180 วันและเบิกค่าใช้จ่ายเกิน 80 %</h5>
-                        <h6>จำนวน 0 งาน</h6>
+                        <h6 id="numcase1">จำนวน 0 งาน</h6>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-smile fa-4x" style="color:#CC0000"></i>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col mr-2">
                         <h5>งานก่อสร้างค้างนานไม่เกิน 180 วันและเบิกค่าใช้จ่ายเกิน 80 %</h5>
-                        <h6>จำนวน 0 งาน</h6>
+                        <h6 id="numcase2">จำนวน 0 งาน</h6>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-smile fa-4x" style="color:#FF8800"></i>
@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col mr-2">
                         <h5>งานก่อสร้างค้างนานเกิน 180 วันและเบิกค่าใช้จ่ายไม่เกิน 80 %</h5>
-                        <h6>จำนวน 0 งาน</h6>
+                        <h6 id="numcase3">จำนวน 0 งาน</h6>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-smile fa-4x" style="color:#007E33"></i>
