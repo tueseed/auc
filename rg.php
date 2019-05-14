@@ -1,6 +1,6 @@
 <div class="row">
 
-    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=A">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=A">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -16,7 +16,7 @@
         </div>
     </a>
 
-    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=B">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=B">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -32,7 +32,7 @@
         </div>
     </a>
 
-    <a class="col-lg-4 mb-4" href="?action=hub&hub_code=C">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=C">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -47,8 +47,8 @@
             <div class="overlay">PEAN3</div>
         </div>
     </a>
-
-    <div class="col-lg-4 mb-4">
+    
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=D">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -62,9 +62,9 @@
             </div>
             <div class="overlay">PEANE1</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=E">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -78,9 +78,9 @@
             </div>
             <div class="overlay">PEANE2</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=F">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -94,9 +94,9 @@
             </div>
             <div class="overlay">PEANE3</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=G">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -110,9 +110,9 @@
             </div>
             <div class="overlay">PEAC1</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=H">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -126,9 +126,9 @@
             </div>
             <div class="overlay">PEAC2</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="col-lg-4 mb-2 nav-link" href="?action=hub&hub_code=I">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -142,9 +142,9 @@
             </div>
             <div class="overlay">PEAC3</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=J">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -158,9 +158,9 @@
             </div>
             <div class="overlay">PEAS1</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2"href="?action=hub&hub_code=K">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -174,9 +174,9 @@
             </div>
             <div class="overlay">PEAS2</div>
         </div>
-    </div>
+    </a>
 
-    <div class="col-lg-4 mb-4">
+    <a class="nav-link col-lg-4 mb-2" href="?action=hub&hub_code=L">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -190,7 +190,7 @@
             </div>
             <div class="overlay">PEAS3</div>
         </div>
-    </div>
+    </a>
 
     
 
