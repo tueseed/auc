@@ -8,7 +8,7 @@
   $server = "localhost";
 	$username = "root";
 	$password = "";
-	$db = "pythondb";
+	$db = "auc";
 	
 	
   $conn = new mysqli($server, $username, $password, $db);
