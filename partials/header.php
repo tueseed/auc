@@ -25,7 +25,7 @@
         <div class="container-fluid">
           <a class="navbar-brand font-weight-bold" href="?action=rg">
             <img src="./assets/images/pea-logo.png" width="100" class="d-inline-block align-top" alt="">
-            โปรแกรมติดตามงานก่อสร้างระบบไฟฟ้า
+            โปรแกรมติดตามงานก่อสร้างระบบไฟฟ้า <span id="head_peaname"></span>
           </a>
           <div class="dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">

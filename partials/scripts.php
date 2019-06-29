@@ -16,3 +16,4 @@
 
 <script src="./scripts/global.js"></script>
 <script src="vendor/chart.js/Chart.min.js"></script>
+<script src="./assets/js/jquery.blockUI.js"></script>

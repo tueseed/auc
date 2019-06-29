@@ -15,6 +15,9 @@ if(action != 'login')
                     {
                         window.location.href = "?action=login"
                     }
-    var logged = session.TitleFullName + session.FirstName + " " + session.LastName +"        "+'<img src="http://mis.pea.co.th/misadmin/image/' + session.Username + '.jpg" class="img-profile rounded-circle" width="50" height="50">'
+    var logged = session.TitleFullName + session.FirstName + " " + session.LastName +"        "+'<img src="https://epi.pea.co.th/Images/' + session.Username + '.jpg" class="img-profile rounded-circle" width="50" height="50">'
     document.getElementById('user_logged').innerHTML = logged;
 }
+
+
+

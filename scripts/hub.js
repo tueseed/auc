@@ -39,7 +39,8 @@ function getUrlVars() {
 function card_render(peaname)
 {
     var card_area = document.getElementById("card_area")
-    card_area.innerHTML = card_area.innerHTML + '<a class="col-lg-4 mb-4" href="#"><div class="card"><div class="card-body"><div class="row"><div class="col mr-2"><h3>'+peaname+'</h3></div><div class="col-auto"><i class="fas fa-building fa-4x"></i></div></div></div><div class="overlay">Click.</div></div></a>';
+
+    card_area.innerHTML = card_area.innerHTML + '<a class="nav-link col-lg-4 mb-4" href="?action=office&peaname='+peaname+'"><div class="card"><div class="card-body"><div class="row"><div class="col mr-2"><h3>'+peaname+'</h3></div><div class="col-auto"><i class="fas fa-building fa-4x"></i></div></div></div><div class="overlay">Click.</div></div></a>';
 }
 var hub_code = getUrlVars()["hub_code"];
 var formdata = new FormData();
