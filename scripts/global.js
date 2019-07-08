@@ -35,6 +35,8 @@ function getUrlVars() {
     return vars;
   }
 
+  $("#circularMenu").hide();
+
 
 
 

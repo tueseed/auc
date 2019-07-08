@@ -22,6 +22,8 @@
   
   // include essentails scripts 
   require('./partials/pop_menu.php');
+
+
   require("./partials/scripts.php");
 
   // include script control withit page

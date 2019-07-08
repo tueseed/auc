@@ -246,3 +246,6 @@ function getUrlVars() {
 var peaname = getUrlVars()["peaname"];
 var peaname_e = decodeURIComponent(peaname);
 $('#head_peaname').text(peaname_e);
+
+var action = getUrlVars()["action"];
+if(action == "office"){$("#circularMenu").show()}
