@@ -34,11 +34,23 @@
                 <img src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" width="75" height="50">
               </span>
             </a>
-            <div class="dropdown-menu">
-              <img src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" width="75" height="50">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="#">Link 3</a>
+            <div class="dropdown-menu dropdown-menu-right justify-content-center">
+                <div class="dropdown-item">
+                  <img id="drop_img" src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" class="img-profile rounded-circle" width="50" height="50">
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-user-tag fa-sm fa-fw mr-2 text-gray-400"></i>
+                  <span id = "emp_name1"></span>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-building fa-sm fa-fw mr-2 text-gray-400"></i>
+                  <span id = "office"></span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
             </div>
           </div>
         </div>
