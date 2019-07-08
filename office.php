@@ -1,6 +1,6 @@
 <div class="row">
 
-    <a class="nav-link col-lg-3 mb-2" href="?action=hub&hub_code=J">
+    <a class="nav-link col-lg-3 mb-2" href="?action=case_table&case_cmd=1">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
@@ -16,7 +16,7 @@
             <div class="overlay">Click</div>
         </div>
     </a>
-    <a class="nav-link col-lg-3 mb-2" href="?action=hub&hub_code=J">
+    <a class="nav-link col-lg-3 mb-2" href="?action=case_table&case_cmd=2">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
@@ -33,7 +33,7 @@
         </div>
     </a>
 
-    <a class="nav-link col-lg-3 mb-2" href="?action=hub&hub_code=J">
+    <a class="nav-link col-lg-3 mb-2" href="?action=case_table&case_cmd=3">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
@@ -50,7 +50,7 @@
         </div>
     </a>
 
-    <a class="nav-link col-lg-3 mb-2" href="?action=hub&hub_code=J">
+    <a class="nav-link col-lg-3 mb-2" href="?action=case_table&case_cmd=4">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">

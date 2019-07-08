@@ -19,5 +19,21 @@ if(action != 'login')
     document.getElementById('user_logged').innerHTML = logged;
 }
 
+function toggle_menu()
+{
+  document.getElementById('circularMenu').classList.toggle('active');
+  
+}
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+  }
+
+
+
 
 

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="./assets/css/bootstrap-table-sticky-header.css">
     <link rel="stylesheet" href="./assets/css/effect.css">
+    
     <style>
       * {
         font-family: 'Sarabun', 'Roboto', sans-serif;
@@ -48,3 +49,4 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
+          
