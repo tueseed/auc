@@ -8,8 +8,9 @@
   $server = "localhost";
 	$username = "root";
 	$password = "";
-	$db = "auc";
-	
+  $db = "auc";
+  
+
 	
   $conn = new mysqli($server, $username, $password, $db);
 
