@@ -64,6 +64,10 @@ function call_auth()
                     {
                         window.location.href = "hub.php?code=" + office;
                     }
+                    else if(num_code !== '000')
+                    {
+                        window.location.href = "?action=hub&hub_code=" + (session.BaCode).substr(0,3);
+                    }
                 //window.location.href = "index.php";
                 }
             }			
