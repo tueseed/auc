@@ -1,6 +1,3 @@
-
-    <h5 class="header text-primary font-weight-bold ml-3" id="head_case"></h5>
-  <div class="col-sm-10 col-md-10 col-lg-10">
     <table 
       data-toggle="table" 
       data-pagination="true"
@@ -26,4 +23,4 @@
         </tr>
       </thead>
     </table>
-  </div>
+  

@@ -60,5 +60,27 @@
     <main class="mb-3">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="col-sm-2 col-md-4 col-lg-2">
+            <h5 class="header text-secondary font-weight-bold text-left">เมนูหลัก</h5>
+            <div class="nav flex-column nav-pills rounded" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link <?=$action=='manage'?'active':'' ?>" href="?action=manage">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>  
+                สายงานการไฟฟ้าภาค 1
+              </a>
+              <a class="nav-link <?=$action=='map'?'active':'' ?>" href="?action=map">
+              <i class="fa fa-clipboard"></i>  
+              สายงานการไฟฟ้าภาค 2
+              </a>
+              <a class="nav-link <?=$action=='report'?'active':'' ?>" href="?action=report">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                สายงานการไฟฟ้าภาค 3
+              </a>
+              <a class="nav-link active" href="?action=report">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                สายงานการไฟฟ้าภาค 4
+              </a>
+            </div>
+          </div>
+        
+          <div class="col-sm-10 col-md-10 col-lg-10">
           
