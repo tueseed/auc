@@ -75,7 +75,7 @@
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
                 สายงานการไฟฟ้าภาค 3
               </a>
-              <a class="nav-link active" href="?action=report">
+              <a class="nav-link active" href="?action=home1&office=rg4">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
                 สายงานการไฟฟ้าภาค 4
               </a>

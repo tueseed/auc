@@ -1,5 +1,25 @@
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Est-Sap - โปรแกรมติดตามงานก่อสร้างระบบไฟฟ้า</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/theme_1545570683953.css">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-table-sticky-header.css">
+    <link rel="stylesheet" href="./assets/css/effect.css">
+    <script src="./scripts/login.js"></script>
+    <style>
+      * {
+        font-family: 'Sarabun', 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+
 <div class="row">
-    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 mt-5">
       <div class="animated fadeIn card shadow p-3">
         <div class="card-body">
           <p style="text-align:center;">
@@ -25,3 +45,7 @@
       </div>
     </div>
   </div>
+
+  <?php
+    require("./partials/scripts.php");
+  ?>
