@@ -58,7 +58,7 @@ function call_auth()
                     console.log((session.BaCode).substr(0,1) + " From Complete fn..");
                     if(office == 'Z' || session.EmployeeId == '00500290')
                     {
-                        window.location.href = "index.php?action=home1";
+                        window.location.href = "index.php?action=rg1";
                     }
                     else if(num_code == '000')
                     {

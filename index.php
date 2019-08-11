@@ -3,11 +3,13 @@
 <?php 
   // check 'action' from get params
   if(!array_key_exists("action", $_GET)){
-    header("Location: ?action=home");
+    header("Location: ?action=home1");
     exit(0);
   }
   // get action value from action key in $_GET
   $action = $_GET['action'];
+  if(array_key_exists("rg", $_GET)){$rg = $_GET['rg'];}
+  
 ?>
 <?php require('./partials/header.php'); ?>
 <?php 
