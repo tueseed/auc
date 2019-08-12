@@ -4,9 +4,9 @@ var menu = document.getElementById("v-pills-tab")
 if(key == '4')
 {
     menu.innerHTML = "";
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&peacode=J"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.1</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&peacode=K"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.2</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&peacode=L"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.3</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=J"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.1</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=K"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.2</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=L"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟต.3</a>'
 }
 else if(key == '3')
 {

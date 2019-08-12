@@ -44,7 +44,7 @@ $.ajax({
             }				
     });
 
-function menu_render(peaname)
+function menu_render(peaname,peacode)
 {
   menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&peacode=J"><i class="fa fa-clipboard" aria-hidden="true"></i> ' + peaname + '</a>'
 }
