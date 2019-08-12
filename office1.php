@@ -1,6 +1,5 @@
 
     <h5 class="header text-primary font-weight-bold ml-3" id="head_case"></h5>
-  <div class="col-sm-10 col-md-10 col-lg-10">
     <table 
       data-toggle="table" 
       data-pagination="true"
@@ -9,8 +8,8 @@
       data-sticky-header="true"
       data-search="true"
       data-page-list="[5, 10, 20, 100, ALL]"
-      data-url="./api/datatable/job_api.php?pea_name=<?=$_GET['peaname']?>"
-      data-page-size="10">
+      data-url="./api/datatable/job_api.php"
+      data-page-size="5">
       <thead>
         <tr> 
         <th data-field="wbs" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> WBS</th>
@@ -26,4 +25,3 @@
         </tr>
       </thead>
     </table>
-  </div>

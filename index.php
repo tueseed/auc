@@ -3,7 +3,7 @@
 <?php 
   // check 'action' from get params
   if(!array_key_exists("action", $_GET)){
-    header("Location: ?action=home1");
+    header("Location: ?action=rg1");
     exit(0);
   }
   // get action value from action key in $_GET

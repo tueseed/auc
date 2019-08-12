@@ -1,4 +1,5 @@
-    function textCenterFormatter(value, row, index) {
+var menu = document.getElementById("v-pills-tab") 
+   function textCenterFormatter(value, row, index) {
       return "<div class='text-center'>" + value + "</div>";
     }
 
@@ -13,8 +14,37 @@
 
 
 
-      var peaname = getUrlVars()["peaname"];
-var peaname_e = decodeURIComponent(peaname);
-$('#head_peaname').text(peaname_e);
+var peacode = getUrlVars()["peacode"];
+// var peaname_e = decodeURIComponent(peaname);
+// $('#head_peaname').text(peaname_e);
 var action = getUrlVars()["action"];
 if(action == "office1"){$("#circularMenu").show()}
+menu.innerHTML = "";
+var formdata = new FormData();
+formdata.append('peacode',peacode);
+$.ajax({
+    url: 'api/query_office_api.php',
+    method: 'POST',
+    data:formdata,
+    async: true,
+    cache: false,
+    processData: false,
+    contentType: false,
+    success: function(response) {
+                var obj = JSON.parse(response);
+                var i = 0;
+                
+                while(obj[i])
+                {
+                    
+                    menu_render(obj[i].peaname,obj[i].peacode);
+                    i++;
+                } 
+                
+            }				
+    });
+
+function menu_render(peaname)
+{
+  menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&peacode=J"><i class="fa fa-clipboard" aria-hidden="true"></i> ' + peaname + '</a>'
+}

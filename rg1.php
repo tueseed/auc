@@ -8,8 +8,8 @@
       data-sticky-header="true"
       data-search="true"
       data-page-list="[5, 10, 20, 100, ALL]"
-      data-url="./api/datatable/job_api.php?pea_name=<?=$_GET['peaname']?>"
-      data-page-size="10">
+      data-url="./api/datatable/job_api.php"
+      data-page-size="5">
       <thead>
         <tr> 
         <th data-field="wbs" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> WBS</th>

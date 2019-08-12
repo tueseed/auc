@@ -24,7 +24,7 @@
       <!-- Image and text -->
       <nav class="shadow-sm navbar navbar-light bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand font-weight-bold" href="?action=rg">
+          <a class="navbar-brand font-weight-bold" href="#">
             <img src="./assets/images/pea-logo.png" width="100" class="d-inline-block align-top" alt="">
             โปรแกรมติดตามงานก่อสร้างระบบไฟฟ้า <span id="head_peaname"></span>
           </a>
@@ -61,7 +61,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-2 col-md-4 col-lg-2">
-            <h5 class="header text-secondary font-weight-bold text-left">เมนูหลัก</h5>
+            <a href="index.php" class="nav-link"><h5 class="header text-secondary font-weight-bold text-left">เมนูหลัก</h5></a>
             <div class="nav flex-column nav-pills rounded" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link <?=$rg=='1'?'active':'' ?>" href="?action=rg1&rg=1">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>  

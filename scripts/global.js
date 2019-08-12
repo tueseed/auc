@@ -38,7 +38,7 @@ function getUrlVars() {
   $("#circularMenu").hide();
 
   var action = getUrlVars()["action"];
-  if(action == 'home1')
+  if(action == 'rg1')
   {
     var session  = JSON.parse(sessionStorage.getItem('data'));
     if(session == null)

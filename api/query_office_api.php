@@ -1,22 +1,30 @@
 <?php
-    require('../utils/db_connector.php');
+	require('../utils/db_connector.php');
+	$peacode = $_POST["peacode"];
     $sql = "SELECT 
 	                *
             FROM 
 	                tbl_office 
             WHERE 
 	                (
-		                (peacode LIKE 'J%' OR peacode LIKE 'K%' OR peacode LIKE 'L%') 
+		                (peacode LIKE '$peacode%') 
 		            AND 
-		                peacode LIKE '___1%'
+		                peacode LIKE '___1_1'
 	                ) 
 		        OR 
 	                (
-		                (peacode LIKE 'J%' OR peacode LIKE 'K%' OR peacode LIKE 'L%') 
+		                (peacode LIKE '$peacode%') 
 		            AND 
 		                peacode LIKE '%00000'
                     )
-            ORDER BY peacode";//ภ4
+			ORDER BY peacode";//ภ4
+	$query = mysqli_query($conn,$sql);
+	$data = array();
+    while($obj = mysqli_fetch_assoc($query))
+    {
+        array_push($data,$obj);
+    }
+    echo json_encode($data); 
 
 
 
