@@ -12,17 +12,17 @@ if(key == '4')
 else if(key == '3')
 {
     menu.innerHTML = "";
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.1</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.2</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.3</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=G"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.1</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=H"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.2</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=I"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟก.3</a>'
     $('#head_peaname').text(' สายงานการไฟฟ้าภาค 3');}
 
 else if(key == '2')
 {
     menu.innerHTML = "";
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.1</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.2</a>'
-    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=home1&office=rg4"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.3</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=D"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.1</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=E"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.2</a>'
+    menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="?action=office1&cmd=hub&peacode=F"><i class="fa fa-clipboard" aria-hidden="true"></i> กฟฉ.3</a>'
     $('#head_peaname').text(' สายงานการไฟฟ้าภาค 2');
 }
 else if(key == '1')
