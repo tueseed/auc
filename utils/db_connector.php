@@ -10,7 +10,7 @@
 	$password = "";
   $db = "auc";
 
-  // $server = "172.30.200.230";
+  // $server = "localhost";
 	// $username = "auc_user";
 	// $password = "p@ssw0rd";
   // $db = "auc_db";

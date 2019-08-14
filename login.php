@@ -41,6 +41,7 @@
               <input type="password" class="form-control" id="employeePassword" name="employeePassword" placeholder="Fill your password." required="">
             </div>
             <button type="button" class="btn btn-primary btn-block" onclick="call_auth()">เข้าสู่ระบบ</button>
+            <div class="mt-4 text-center"><span id="login_alert" style="font-size:20px;color:#fa0202;"></span></div>
         </div>
       </div>
     </div>

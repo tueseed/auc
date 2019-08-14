@@ -50,12 +50,12 @@ function call_auth()
             {
                 console.log("complete...");
                 var session  = JSON.parse(sessionStorage.getItem('data'));
-                var office =(session.BaCode).substr(0,1);
-                var num_code = (session.BaCode).substr(1,3);
                 $.unblockUI();
                 if(session !== null)
                 {
                     console.log((session.BaCode).substr(0,1) + " From Complete fn..");
+                    var office =(session.BaCode).substr(0,1);
+                    var num_code = (session.BaCode).substr(1,3);
                     if(office == 'Z' || session.EmployeeId == '00500290')
                     {
                         window.location.href = "index.php?action=rg1";
@@ -66,7 +66,7 @@ function call_auth()
                     }
                     else if(num_code !== '000')
                     {
-                        window.location.href = "?action=hub&hub_code=" + (session.BaCode).substr(0,3);
+                        window.location.href = "index.php?action=office1&cmd=office&peacode=" + (session.BaCode);
                     }
                 //window.location.href = "index.php";
                 }
