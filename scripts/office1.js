@@ -35,15 +35,8 @@ if(cmd == "hub")
       contentType: false,
       success: function(response) {
                   var obj = JSON.parse(response);
-                   ////
-                   var j =0;
-                   while(obj[j])
-                   {
-                     if(peacode == obj[j].peacode){$('#head_peaname').text(obj[j].peaname);}
-                     j++;
-                   }
-                   ////
                   var i = 0;
+                  $('#head_peaname').text(obj[0].peaname);
                   while(obj[i])
                   {  
                       menu_render(obj[i].peaname,obj[i].peacode);
@@ -69,8 +62,16 @@ else if(cmd == "office")
       contentType: false,
       success: function(response) {
                   var obj = JSON.parse(response);
+                   ////
+                   var j =0;
+                   while(obj[j])
+                   {
+                     if(peacode == obj[j].peacode){$('#head_peaname').text(obj[j].peaname);}
+                     j++;
+                   }
+                   ////
                   var i = 0;
-                  $('#head_peaname').text(obj[0].peaname);
+                  
                   while(obj[i])
                   {  
                       menu_render(obj[i].peaname,obj[i].peacode);
