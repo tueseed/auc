@@ -5,15 +5,15 @@
 
   // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-  // $server = "localhost";
-	// $username = "root";
-	// $password = "";
-  // $db = "auc";
-
   $server = "localhost";
-	$username = "auc_user";
-	$password = "p@ssw0rd";
-  $db = "auc_db";
+	$username = "root";
+	$password = "";
+  $db = "auc";
+
+  // $server = "localhost";
+	// $username = "auc_user";
+	// $password = "p@ssw0rd";
+  // $db = "auc_db";
   
 
 	

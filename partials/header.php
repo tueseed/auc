@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="./assets/css/bootstrap-table-sticky-header.css">
     <link rel="stylesheet" href="./assets/css/effect.css">
+    <link rel="stylesheet" href="./assets/css/sidemenu.css">
     
     <style>
       * {
@@ -60,7 +61,7 @@
     <main class="mb-3">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-2 col-md-4 col-lg-2">
+          <!-- <div class="col-sm-2 col-md-4 col-lg-2">
             <a href="index.php" class="nav-link"><h5 class="header text-secondary font-weight-bold text-left">เมนูหลัก</h5></a>
             <div class="nav flex-column nav-pills rounded" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link <?=$rg=='1'?'active':'' ?>" href="?action=rg1&rg=1">
@@ -80,7 +81,7 @@
                 สายงานการไฟฟ้าภาค 4
               </a>
             </div>
-          </div>
-        
-          <div class="col-sm-10 col-md-10 col-lg-10">
+          </div> -->
+          
+          <div class="col-sm-10 col-md-10 col-lg-12">
           
