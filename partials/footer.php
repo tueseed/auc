@@ -6,7 +6,7 @@
               <span class="dotcls" onclick="closeNav()"style="cursor:pointer"></span>
             </a>
             <div class="nav flex-column nav-pills rounded" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link" href="#" onclick="render_menu(1)">
+            <a class="nav-link" href="#" onclick="render_menu(1)" disabled>
                 <i class="fa fa-clipboard" aria-hidden="true"></i>  
                 สายงานการไฟฟ้าภาค 1
               </a>

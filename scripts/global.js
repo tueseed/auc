@@ -119,6 +119,7 @@ function render_menu(key,office)
     }
     else if(key == 99)
     {
+        table_refresh(office)
         menu.innerHTML = "";
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(0)"><i class="fa fa-clipboard" aria-hidden="true"></i> เมนูหลัก</a>'
         var formdata = new FormData();
@@ -162,11 +163,13 @@ function menu_render(peaname,peacode)
 
 function aj_render_menu_office(peacode)
 {
+   
     var menu = document.getElementById("v-pills-tab")
     menu.innerHTML = "";
     menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(0)"><i class="fa fa-clipboard" aria-hidden="true"></i> เมนูหลัก</a>'
     var formdata = new FormData();
     var peacode3 = peacode.substring(0,3);
+    table_refresh(peacode3)
     formdata.append('peacode',peacode3);
     $.ajax({
         url: 'api/query_office_api1.php',
@@ -182,10 +185,10 @@ function aj_render_menu_office(peacode)
                     while(obj[j])
                     {
                         if(peacode == obj[j].peacode){$('#head_peaname').text(obj[j].peaname);}
-                            j++;
+                        j++;
                         }
                     var i = 0;
-                    $('#head_peaname').text(obj[0].peaname);
+                    
                     while(obj[i])
                     {  
                         render_menu_office(obj[i].peaname,obj[i].peacode);
@@ -201,6 +204,15 @@ function render_menu_office(peaname,peacode)
 {
     var menu = document.getElementById("v-pills-tab")
     menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="aj_render_menu_office(' + "'" + peacode + "'" + ')"><i class="fa fa-clipboard" aria-hidden="true"></i> ' + peaname + '</a>'
+}
+
+function table_refresh(peacode)
+{
+    console.log(peacode)
+    var $table = $('#tbl_data');
+     $table.bootstrapTable('refreshOptions', {
+        url: './api/datatable/job_api.php?peacode=' + peacode
+      })
 }
     
 

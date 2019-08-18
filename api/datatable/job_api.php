@@ -1,12 +1,17 @@
 <?php
     require('../../utils/db_connector.php');
     //$cri_cmd = $_GET["cri_cmd"];
-    //$pea_name = $_GET["pea_name"];
+    $peacode = $_GET["peacode"];
     $sql = "
             SELECT 
-                    *,
-                    DATEDIFF(now(),postg_date) AS day_now
-            FROM tbl_job";
+                *,
+                DATEDIFF(now(),postg_date) AS day_now
+            FROM 
+                tbl_job
+            WHERE
+                ba
+            LIKE
+                '$peacode%'";
         //     WHERE 
         //     office_name LIKE '%$pea_name%'";
     $query_case = mysqli_query($conn,$sql);

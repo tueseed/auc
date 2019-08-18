@@ -5,7 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: hsl(276, 40%, 41%,0.8);
+    background-color: hsl(276, 40%, 41%,0.9);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -21,9 +21,12 @@
     }
 
 .sidenav a:hover {
-    color: #0a0a0a;
+    color: #fdfbfb;
     }
-
+.nav-link:hover
+{
+    background-color: hsl(0, 0%, 4%,0.2);
+}
     .sidenav .closebtn {
     position: absolute;
     top: 0;
