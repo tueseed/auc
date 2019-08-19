@@ -4,9 +4,10 @@ var menu = document.getElementById("v-pills-tab")
 
 function col(val)
 {
-  // var $table = $('#tbl_data')
-  // $table.bootstrapTable('hideColumn', 'wbs')
-  alert(val)
+   var $table = $('#tbl_data')
+   
+  $("#"+ val).prop("checked") ? $table.bootstrapTable('showColumn', val) : $table.bootstrapTable('hideColumn', val)
+  
 }
 
 
@@ -25,3 +26,5 @@ function textCenterFormatter(value, row, index) {
       //   var per = parseFloat(value);
       return "<div class='text-center'>" + per.toFixed(2) + "</div>";
     }
+
+    

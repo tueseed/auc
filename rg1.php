@@ -24,6 +24,7 @@
         <th data-field="percent" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าแรง%</th>
         <th data-field="tech_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ผู้ควบคุมงาน</th>
         <th data-field="tech_id" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> รหัสพนักงาน</th>
+        <th data-field="act" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าใช้จ่าย</th>
         </tr>
       </thead>
     </table>
@@ -35,8 +36,8 @@
             คอลัมน์
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <label class="dropdown-item" ><input type="checkbox" id="check_field" value="wbs" onclick="col(this.value)"/>&nbsp;WBS</label>
-            <a class="dropdown-item" href="#" ><input id="check_field" type="checkbox" value="des" onclick="col(this.value)"/>&nbsp;รายละเอียด</a>
+            <label class="dropdown-item" ><input type="checkbox" id="wbs" value="wbs" onclick="col(this.value)" checked/>&nbsp;WBS</label>
+            <a class="dropdown-item" href="#" ><input id="description" type="checkbox" value="description" onclick="col(this.value)" checked/>&nbsp;รายละเอียด</a>
           </div>
         </div>
         </div>
