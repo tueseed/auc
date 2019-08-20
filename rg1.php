@@ -1,34 +1,61 @@
+<div class="row ml-2 mr-2">
+  <div class="col-lg-2">
+    <div class="card mt-2">
+      <div class="card-header">
+      <span class="font-weight-bold text-primary">สถานะงาน C1(กำลังก่อสร้าง)</span>
+      </div>
+      <div class="card-body">
+        <!-- <div class="text-center" style="font-size:50px;">
+          <span class="font-weight-bold text-danger" id="high_load">--</span>
+        </div>
+        <div class="float-right" style="font-size:14px;">
+              <span class="font-weight-bold text-danger">เครื่อง</span>
+        </div> -->
+        <div class="font-weight-bold text-primary float-left" tyle="font-size:14px;">
+          <p  id="c1_num"><i class="fas fa-folder-open"></i></p>
+          <p  id="c1_num"><i class="fas fa-dollar-sign"></i></p>
+        </div>
+        <div class="font-weight-bold text-primary float-right" tyle="font-size:14px;">
+          <p  id="c1_num">จำนวน 25 งาน</p>
+          <p  id="c1_num">มูลค่า 2.5 ล้านบาท</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3 ml-2 mr-2">
+
 <div class="card">
-<div class="card-body">
-    <table 
-      id="tbl_data"
-      data-toggle="table" 
-      data-pagination="true"
-      data-pagination-v-align="both"
-      data-fixed-columns="true"
-      data-sticky-header="true"
-      data-search="true"
-      data-page-list="[5, 10, 20, 100, ALL]"
-      data-url="./api/datatable/job_api.php?peacode="
-      data-page-size="5">
-      <thead>
-        <tr> 
-        <th data-field="ba" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> รหัสการไฟฟ้า</th>
-        <th data-field="wbs" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> WBS</th>
-        <th data-field="description" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> คำอธิบาย</th>
-        <th data-field="office_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> หน่วยงาน</th>
-        <th data-field="user_status" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> สถานะผู้ใช้</th>
-        <th data-field="network" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> โครงข่าย</th>
-        <th data-field="postg_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> วันที่เบิกของครั้งแรก</th>
-        <th data-field="day_now" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> จำนวนวัน</th>
-        <th data-field="percent" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าแรง%</th>
-        <th data-field="tech_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ผู้ควบคุมงาน</th>
-        <th data-field="tech_id" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> รหัสพนักงาน</th>
-        <th data-field="act" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าใช้จ่าย</th>
-        </tr>
-      </thead>
-    </table>
-</div> 
+  <div class="card-body">
+      <table 
+        id="tbl_data"
+        data-toggle="table" 
+        data-pagination="true"
+        data-pagination-v-align="both"
+        data-fixed-columns="true"
+        data-sticky-header="true"
+        data-search="true"
+        data-page-list="[5, 10, 20, 100, ALL]"
+        data-url="./api/datatable/job_api.php?peacode="
+        data-page-size="5">
+        <thead>
+          <tr> 
+          <th data-field="ba" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> รหัสการไฟฟ้า</th>
+          <th data-field="wbs" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> WBS</th>
+          <th data-field="description" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> คำอธิบาย</th>
+          <th data-field="office_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> หน่วยงาน</th>
+          <th data-field="user_status" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> สถานะผู้ใช้</th>
+          <th data-field="network" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> โครงข่าย</th>
+          <th data-field="postg_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> วันที่เบิกของครั้งแรก</th>
+          <th data-field="day_now" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> จำนวนวัน</th>
+          <th data-field="percent" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าแรง%</th>
+          <th data-field="tech_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ผู้ควบคุมงาน</th>
+          <th data-field="tech_id" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> รหัสพนักงาน</th>
+          <th data-field="act" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-bolt"></i> ค่าใช้จ่าย</th>
+          </tr>
+        </thead>
+      </table>
+  </div> 
 <div class="card-footer">
   <div class="float-left">
         <!-- <div class="dropup d-inline-block">
@@ -82,4 +109,5 @@
                         
     </div>
   </div>
+</div>
 </div>
