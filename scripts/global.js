@@ -131,14 +131,15 @@ function render_menu(key,office)
             contentType: false,
             success: function(response) {
                         var obj = JSON.parse(response);
-                        ////
+                        // //
                         // var j =0;
                         // while(obj[j])
                         // {
-                        //     if(peacode == obj[j].peacode){$('#head_peaname').text(obj[j].peaname);}
+                        //     if(office == obj[j].peacode){$('#head_peaname').text(obj[j].peaname);}
                         //     j++;
                         // }
-                        ////
+                        // //
+                        $('#head_peaname').text(obj[0].peaname)
                         var i = 0;
                         while(obj[i])
                         {  

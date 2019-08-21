@@ -79,15 +79,6 @@
   </div> 
 <div class="card-footer">
   <div class="float-left">
-        <!-- <div class="dropup d-inline-block">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            คอลัมน์
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <label class="dropdown-item" ><input type="checkbox" id="wbs" value="wbs" onclick="col(this.value)" checked/>&nbsp;WBS</label>
-            <a class="dropdown-item" href="#" ><input id="description" type="checkbox" value="description" onclick="col(this.value)" checked/>&nbsp;รายละเอียด</a>
-          </div>
-        </div> -->
         <button class="btn btn-sm btn-outline-primary" href="#" title="Like" data-toggle="modal"  data-target="#column_modal">
           คอลัมน์
         </button>
