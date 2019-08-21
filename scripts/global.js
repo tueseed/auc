@@ -6,6 +6,9 @@ function getUrlVars() {
     });
     return vars;
 }
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 // var action = getUrlVars()["action"];
 // if(action != 'login')
 // {
@@ -26,14 +29,6 @@ function toggle_menu()
   document.getElementById('circularMenu').classList.toggle('active');
   
 }
-
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-  }
 
 //   $("#circularMenu").hide();
   var session  = JSON.parse(sessionStorage.getItem('data'));
@@ -114,12 +109,14 @@ function render_menu(key,office)
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(2)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 2</a>'
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(3)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 3</a>'
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(4)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 4</a>'
-        
+        query_data('')
+        table_refresh('')
         $('#head_peaname').text('');
     }
     else if(key == 99)
     {
         table_refresh(office)
+        query_data(office)
         menu.innerHTML = "";
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(0)"><i class="fa fa-clipboard" aria-hidden="true"></i> เมนูหลัก</a>'
         var formdata = new FormData();
@@ -170,6 +167,7 @@ function aj_render_menu_office(peacode)
     var formdata = new FormData();
     var peacode3 = peacode.substring(0,3);
     table_refresh(peacode3)
+    query_data(peacode3)
     formdata.append('peacode',peacode3);
     $.ajax({
         url: 'api/query_office_api1.php',
@@ -188,7 +186,6 @@ function aj_render_menu_office(peacode)
                         j++;
                         }
                     var i = 0;
-                    
                     while(obj[i])
                     {  
                         render_menu_office(obj[i].peaname,obj[i].peacode);
@@ -208,12 +205,46 @@ function render_menu_office(peaname,peacode)
 
 function table_refresh(peacode)
 {
-    console.log(peacode)
     var $table = $('#tbl_data');
      $table.bootstrapTable('refreshOptions', {
         url: './api/datatable/job_api.php?peacode=' + peacode
       })
 }
+
+function query_data(peacode)
+{
+    var card = document.getElementById("data_area")
+    card.innerHTML = ""
+    var formdata = new FormData();
+    formdata.append('peacode',peacode);
+    $.ajax({
+        url: 'api/query_value_api.php',
+        method: 'POST',
+        data:formdata,
+        async: true,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+                    var obj = JSON.parse(response);
+                    var i = 0;
+                    while(obj[i])
+                    {  
+                        render_card_value(obj[i]);
+                        i++;
+                    } 
+                    console.log(obj)
+                }				
+        });
+}
+
+function render_card_value(data)
+{
+    var status = {C1:"กำลังก่อสร้าง",D1:"แล้วเสร็จ-ตรวจสอบพัสดุ",D2:"แล้วเสร็จทางเทคนิค",D3:"รับเอกสารปิด กส.",F2:"ปิด กส.ทางบัญชีระดับ WBS"}
+    var card = document.getElementById("data_area")
+    card.innerHTML = card.innerHTML + '<div class="col-lg-3"><div class="card mt-2"><div class="card-body"><h5 class="card-title"> สถานะงาน ' + data.user_status +' '+status[data.user_status]+'</h5><div class="float-right text-success font-weight-bold"><h5 class="card-title"><i class="fas fa-folder-open"></i> '+ data.num_wbs +' งาน</h5><h5 class="card-title"><i class="far fa-money-bill-alt"></i>  ' + data.val + ' ล้านบาท</h5></div></div></div></div>'
+}
+query_data('')
     
 
 

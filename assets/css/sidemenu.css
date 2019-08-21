@@ -5,7 +5,8 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: hsl(276, 40%, 41%,0.9);
+    background-color: hsl(276, 40%, 41%);
+    background-image: linear-gradient(hsl(276, 40%, 41%), hsl(277, 68%, 52%));
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -58,7 +59,7 @@
     .dotcls {
                         height: 100px;
                         width: 100px;
-                        background-color: rgb(173, 101, 221);
+                        background-color: rgb(76, 60, 87);
                         border-radius: 50%;
                         display: block;
                         }
