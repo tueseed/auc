@@ -167,8 +167,9 @@ function aj_render_menu_office(peacode)
     menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(0)"><i class="fa fa-clipboard" aria-hidden="true"></i> เมนูหลัก</a>'
     var formdata = new FormData();
     var peacode3 = peacode.substring(0,3);
-    table_refresh(peacode3)
-    query_data(peacode3)
+    var peacode4 = peacode.substring(0,4);
+    table_refresh(peacode4)
+    query_data(peacode4)
     formdata.append('peacode',peacode3);
     $.ajax({
         url: 'api/query_office_api1.php',
