@@ -16,7 +16,9 @@
                 LIKE 
 	                '$peacode%' 
                 GROUP BY 
-	                user_status";
+                    user_status
+                ORDER BY
+                    user_status";
         //     WHERE 
         //     office_name LIKE '%$pea_name%'";
     $query_case = mysqli_query($conn,$sql);
