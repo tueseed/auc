@@ -1,12 +1,12 @@
           </div> <!-- end of content col's class tag -->
         </div> <!-- end of row's class tag -->
       </div> <!-- end of container -->
-      <div id="mySidenav" class="sidenav">
+      <div id="mySidenav" class="sidenav shadow">
             <a class="cls_menu" onclick="closeNav()">
               <span class="dotcls" onclick="closeNav()"style="cursor:pointer"></span>
             </a>
             <div class="nav flex-column nav-pills rounded" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link" href="#" onclick="render_menu(1)" disabled>
+              <!-- <a class="nav-link" href="#" onclick="render_menu(1)" disabled>
                   <i class="fa fa-clipboard" aria-hidden="true"></i>  
                   สายงานการไฟฟ้าภาค 1
                 </a>
@@ -17,7 +17,7 @@
                 <a class="nav-link" href="#" onclick="render_menu(3)">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   สายงานการไฟฟ้าภาค 3
-                </a>
+                </a> -->
                 <a class="nav-link" href="#" onclick="render_menu(4)">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   สายงานการไฟฟ้าภาค 4

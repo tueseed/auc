@@ -113,9 +113,9 @@ function render_menu(key,office)
     else if(key == 0)
     {
         menu.innerHTML = "";
-        menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(1)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 1</a>'
-        menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(2)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 2</a>'
-        menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(3)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 3</a>'
+        // menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(1)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 1</a>'
+        // menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(2)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 2</a>'
+        // menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(3)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 3</a>'
         menu.innerHTML = menu.innerHTML + '<a class="nav-link" href="#" onclick="render_menu(4)"><i class="fa fa-clipboard" aria-hidden="true"></i>  สายงานการไฟฟ้าภาค 4</a>'
         query_data('')
         table_refresh('')
@@ -252,7 +252,7 @@ function render_card_value(data)
 {
     var status = {C1:"กำลังก่อสร้าง",D1:"แล้วเสร็จ-ตรวจสอบพัสดุ",D2:"แล้วเสร็จทางเทคนิค",D3:"รับเอกสารปิด กส.",F2:"ปิด กส.ทางบัญชีระดับ WBS"}
     var card = document.getElementById("data_area")
-    card.innerHTML = card.innerHTML + '<div class="col-lg-3"><div class="card mt-2"><div class="card-body"><h5 class="card-title"> สถานะงาน ' + data.user_status +' '+status[data.user_status]+'</h5><div class="float-right text-success font-weight-bold"><h5 class="card-title"><i class="fas fa-folder-open"></i> '+ data.num_wbs +' งาน</h5><h5 class="card-title"><i class="far fa-money-bill-alt"></i>  ' + data.val + ' ล้านบาท</h5></div></div></div></div>'
+    card.innerHTML = card.innerHTML + '<div class="col-lg-3"><div class="card mt-3 bg-primary shadow text-white border-primary"><div class="card-body"><h5 class="card-title">' + data.user_status +' '+status[data.user_status]+'</h5><div class="float-right font-weight-bold"><h5 class="card-title"><i class="fas fa-folder-open"></i> '+ data.num_wbs +' งาน</h5><h5 class="card-title"><i class="far fa-money-bill-alt"></i>  ' + data.val + ' ล้านบาท</h5></div></div></div></div>'
 }
 query_data('')
     

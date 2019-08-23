@@ -9,6 +9,10 @@
                 peacode 
             LIKE 
                 '$peacode%'
+            AND
+                peacode
+            LIKE
+                '_____1'
 			ORDER BY 
                 peacode";//ภ4
 	$query = mysqli_query($conn,$sql);

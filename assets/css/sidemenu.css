@@ -6,7 +6,6 @@
     top: 0;
     left: 0;
     background-color: hsl(276, 40%, 41%);
-    background-image: linear-gradient(hsl(276, 40%, 41%), hsl(277, 68%, 52%));
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
