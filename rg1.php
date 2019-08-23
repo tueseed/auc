@@ -126,32 +126,53 @@
       <div class='modal-dialog modal-lg' role='document' >
         <div class='modal-content'>
           <div class='modal-header'>
-            <h5 class='modal-title font-weight-bold' id="head_modal">รายละเอียดงาน <span id="pea_no"></span></h5>
+            <h5 class='modal-title font-weight-bold' id="head_modal">รายละเอียดงาน <span id="wbs_no"></span></h5>
             <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
               <span aria-hidden='true'>&times;</span>
             </button>
           </div>
           <div class='modal-body'>
-            <!-- <div class="row text-success font-weight-bold">
-              <div class="col-lg-4">
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="ba" value="ba" onclick="col(this.value)" checked/>&nbsp;รหัสการไฟฟ้า</label>
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="wbs" value="wbs" onclick="col(this.value)" checked/>&nbsp;WBS</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="description" value="description" onclick="col(this.value)" checked/>&nbsp;คำอธิบาย</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="office_name" value="office_name" onclick="col(this.value)" checked/>&nbsp;หน่วยงาน</label>
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="font-weight-bold" >คำอธิบายงาน :</p>
+                <p class="font-weight-bold text-success" id="des"></p>
               </div>
-              <div class="col-lg-4">
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="user_status" value="user_status" onclick="col(this.value)" checked/>&nbsp;สถานะผู้ใช้</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="network" value="network" onclick="col(this.value)" checked/>&nbsp;เลขที่โครงข่าย</label>
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="postg_date" value="postg_date" onclick="col(this.value)" checked/>&nbsp;วันที่เบิกของครั้งแรก</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="day_now" value="day_now" onclick="col(this.value)" checked/>&nbsp;จำนวนวัน</label> 
+              <div class="col-lg-6">
+                <p class="font-weight-bold">สถานะผู้ใช้ :</p>
+                <p class="font-weight-bold text-success" id="user"></p>
               </div>
-              <div class="col-lg-4">
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="percent" value="percent" onclick="col(this.value)" checked/>&nbsp;ค่าแรง(%)</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_name" value="tech_name" onclick="col(this.value)" checked/>&nbsp;ชื่อ-สกุล</label>
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_id" value="tech_id" onclick="col(this.value)" checked/>&nbsp;รหัสพนักงาน</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="act" value="act" onclick="col(this.value)" checked/>&nbsp;ค่าใช้จ่ายจริง</label> 
-              </div>       
-            </div>  -->
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="font-weight-bold">วันที่เบิกของครั้งแรก :</p>
+                <p class="font-weight-bold text-success" id="f_date"></p>
+              </div>
+              <div class="col-lg-6">
+                <p class="font-weight-bold">จำนวนวัน :</p>
+                <p class="font-weight-bold text-success" id="num_day"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="font-weight-bold">ค่าแรง(%) :</p>
+                <p class="font-weight-bold text-success" id="labor"></p>
+              </div>
+              <div class="col-lg-6">
+                <p class="font-weight-bold">ค่าใช้จ่ายจริง :</p>
+                <p class="font-weight-bold text-success" id="act_value"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="font-weight-bold">ผู้ควบคุมงาน :</p>
+                <p class="font-weight-bold text-success" id="tech_n"></p>
+              </div>
+              <div class="col-lg-6">
+                <p class="font-weight-bold">รหัสพนักงาน :</p>
+                <p class="font-weight-bold text-success" id="tech_i"></p>
+              </div>
+            </div>           
+            </div> 
           </div>               
         </div>
       </div>

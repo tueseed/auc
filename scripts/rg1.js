@@ -40,8 +40,37 @@ function text_user_sts(value, row, index)
 function job_detail(value, row, index) 
 {
   return [
-      '<a class="btn btn-sm btn-outline-primary" href="#" title="Like" data-toggle="modal"  data-target="#job_detail">',
+      '<a class="btn btn-sm btn-outline-primary" href="#" title="Like" data-toggle="modal" onclick="query_job('+"'" + value + "'" +')"  data-target="#job_detail">',
       '<i class="fa fa-eye"></i> รายละเอียด..',
       "</a>  "
-    ].join("");
+    ].join("")
   }
+
+function query_job(wbs)
+{
+  $("#wbs_no").html(wbs)
+  var status = {C1:"กำลังก่อสร้าง",D1:"แล้วเสร็จ-ตรวจสอบพัสดุ",D2:"แล้วเสร็จทางเทคนิค",D3:"รับเอกสารปิด กส.",F2:"ปิด กส.ทางบัญชีระดับ WBS"}
+  var formdata = new FormData()
+  formdata.append('wbs',wbs)
+  $.ajax({
+      url: 'api/query_job_api.php',
+      method: 'POST',
+      data:formdata,
+      async: true,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+                  var obj = JSON.parse(response)
+                  $("#wbs_no").html(wbs +' '+ obj[0].office_name)
+                  $('#des').html(obj[0].description)
+                  $('#user').html(obj[0].user_status +'-'+ status[obj[0].user_status])
+                  $('#f_date').html(obj[0].postg_date)
+                  $('#num_day').html(obj[0].day_now)
+                  $('#labor').html(obj[0].percent)
+                  $('#act_value').html(numberWithCommas(obj[0].act))
+                  $('#tech_n').html(obj[0].tech_name)
+                  $('#tech_i').html(obj[0].tech_id)
+              }				
+      });
+}
