@@ -9,6 +9,12 @@ function getUrlVars() {
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+function des_session()
+{
+    sessionStorage.removeItem('data');
+    window.location.href = "login.php";
+}
 // var action = getUrlVars()["action"];
 // if(action != 'login')
 // {
@@ -46,8 +52,10 @@ function toggle_menu()
     {
         var logged = session.TitleFullName + session.FirstName + " " + session.LastName +"        "+'<img src="https://epi.pea.co.th/Images/' + session.Username + '.jpg" class="img-profile rounded-circle" width="50" height="50">'
         document.getElementById('user_logged').innerHTML = logged;
-        document.getElementById('drop_img').setAttribute("src","http://mis.pea.co.th/misadmin/image/" + session.Username + ".jpg");
-
+        //document.getElementById('drop_img').setAttribute("src","http://mis.pea.co.th/misadmin/image/" + session.Username + ".jpg");
+        document.getElementById('office_1').innerHTML = session.BaName;
+        document.getElementById('position').innerHTML = session.Position + ' ' + session.LevelDesc;
+        document.getElementById('DepartmentFullName').innerHTML = session.DepartmentFullName;
     }
 
 function openNav() 

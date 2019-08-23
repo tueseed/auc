@@ -30,7 +30,7 @@ function call_auth()
                 //$.blockUI({message : '<h1>กำลังเข้าสู่ระบบ</h1>'});
                 console.log("beforesend.....");
                 $.blockUI({
-                    message: '<div class="spinner-border text-pea display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div><br/><h1 class="font-weight-bold text-pea">กำลังเข้าสู่ระบบ.......</h1>',
+                    message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div><br/><h1 class="font-weight-bold text-pea">กำลังเข้าสู่ระบบ.......</h1>',
                     overlayCSS : { 
                       backgroundColor: '#ffffff',
                       opacity: 1
@@ -58,23 +58,20 @@ function call_auth()
                     var num_code = (session.BaCode).substr(1,3);
                     if(office == 'Z' || session.EmployeeId == '00500290')
                     {
-                        window.location.href = "index.php?action=rg1";
+                       window.location.href = "index.php?action=rg1";
                     }
                     else if(num_code == '000')
                     {
-                        window.location.href = "hub.php?code=" + office;
+                        window.location.href = "index.php?action=rg1";
                     }
                     else if(num_code !== '000')
                     {
-                        window.location.href = "index.php?action=office1&cmd=office&peacode=" + (session.BaCode);
+                        window.location.href = "index.php?action=rg1";
                     }
                 //window.location.href = "index.php";
                 }
             }			
             });
 }
-function des_session()
-{
-    sessionStorage.removeItem('data');
-}
+
 

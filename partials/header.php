@@ -38,18 +38,16 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right justify-content-center">
                 <div class="dropdown-item">
-                  <img id="drop_img" src="http://dynamicwork.net/wp/wp-content/uploads/2014/01/logo-PEA.png" class="img-profile rounded-circle" width="50" height="50">
+                  <span id = "office_1"></span>
                 </div>
                 <div class="dropdown-item">
-                  <i class="fas fa-user-tag fa-sm fa-fw mr-2 text-gray-400"></i>
-                  <span id = "emp_name1"></span>
+                  <span id = "position"></span>
                 </div>
                 <div class="dropdown-item">
-                  <i class="fas fa-building fa-sm fa-fw mr-2 text-gray-400"></i>
-                  <span id = "office"></span>
+                  <span id = "DepartmentFullName"></span>
                 </div>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="?action=login">
+                <a class="dropdown-item" href="#" onclick="des_session()">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
