@@ -163,13 +163,17 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <p class="font-weight-bold">ผู้ควบคุมงาน :</p>
                 <p class="font-weight-bold text-success" id="tech_n"></p>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <p class="font-weight-bold">รหัสพนักงาน :</p>
                 <p class="font-weight-bold text-success" id="tech_i"></p>
+              </div>
+              <div class="col-lg-6">
+                <p class="font-weight-bold">สังกัด :</p>
+                <p class="font-weight-bold text-success" id="head_of"></p>
               </div>
             </div>
             <div class="row">

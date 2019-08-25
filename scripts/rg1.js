@@ -175,9 +175,44 @@ function render_msg(u_name,datetime,msg)
     msg_card.innerHTML = msg_card.innerHTML + '<div class="card shadow mt-1"><div class="card-body"><span class="font-weight-bold"><i class="fas fa-user"></i> ' + u_name + '</span> <span class="text-success"><i class="fas fa-clock" aria-hidden="true"></i> ' + datetime + '</span><br><span class="text-info"><i class="fas fa-comment-dots"></i> ' + msg + '</span></div></div>' 
 }
 
-
+function check_emp()
+{
+  var formdata = new FormData()
+  formdata.append('emp_id',$('#tech_i').text())
+  $.ajax({
+      url: 'api/check_emp_api.php',
+      method: 'POST',
+      data:formdata,
+      async: true,
+      cache: false,
+      processData: false,
+      contentType: false,
+      beforeSend : function()
+            {  
+              $('#head_of').block({
+                  message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div>',
+                  overlayCSS : { 
+                    backgroundColor: '#ffffff',
+                    opacity: 1
+                  },
+                  css : {
+                    opacity: 1,
+                    border: 'none',
+                  }
+                });
+            },
+      success: function(response) {
+                  var obj = JSON.parse(response)
+                  $("#head_of").text(obj.DEPT_SHORT)
+              },
+        complete :function(){
+                                $('#head_of').unblock()        
+                        }					
+      });
+}
 $("#job_detail").on('shown.bs.modal', function(){
   query_msg();
+  check_emp()
  });
 
  $("#job_detail").on('hide.bs.modal', function(){
