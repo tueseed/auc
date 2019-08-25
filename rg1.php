@@ -126,7 +126,7 @@
       <div class='modal-dialog modal-lg' role='document' >
         <div class='modal-content'>
           <div class='modal-header'>
-            <h5 class='modal-title font-weight-bold' id="head_modal">รายละเอียดงาน <span id="wbs_no"></span></h5>
+            <h5 class='modal-title font-weight-bold' id="head_modal">รายละเอียดงาน <span id="wbs_no"></span><span id="office"></span></h5>
             <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
               <span aria-hidden='true'>&times;</span>
             </button>
@@ -171,7 +171,32 @@
                 <p class="font-weight-bold">รหัสพนักงาน :</p>
                 <p class="font-weight-bold text-success" id="tech_i"></p>
               </div>
-            </div>           
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="font-weight-bold">ข้อความ :</p>
+              </div>
+            </div>
+            <div class="row msg" id="row_msg">
+              <div class="col-lg-12" id="msg_area">
+                <!-- <div class="card shadow mt-1">
+                  <div class="card-body">
+                    <span class="font-weight-bold"><i class="fas fa-user"></i> นายนัทธพงศ์ เจริญกิจพิเชียร</span>
+                    <span class="text-success"><i class="fas fa-clock" aria-hidden="true"></i> 25-08-2562 11:30</span>
+                    <br>
+                    <span class="text-info"><i class="fas fa-comment-dots"></i> กำลังดำเนินการ</span>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="input-group ml-1 mr-1">
+                <input type="text" class="form-control" placeholder="ข้อความ" id="text_msg" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <span class="input-group-text btn btn-primary" id="basic-addon2"><span class="text-white" onclick="insert_msg()"><i class="fas fa-paper-plane"></i></span></span>
+                </div>
+              </div>
+            </div>             
             </div> 
           </div>               
         </div>

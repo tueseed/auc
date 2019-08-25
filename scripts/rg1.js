@@ -62,7 +62,8 @@ function query_job(wbs)
       contentType: false,
       success: function(response) {
                   var obj = JSON.parse(response)
-                  $("#wbs_no").html(wbs +' '+ obj[0].office_name)
+                  $("#wbs_no").html(wbs)
+                  $("#office").html(' '+ obj[0].office_name)
                   $('#des').html(obj[0].description)
                   $('#user').html(obj[0].user_status +'-'+ status[obj[0].user_status])
                   $('#f_date').html(obj[0].postg_date)
@@ -74,3 +75,83 @@ function query_job(wbs)
               }				
       });
 }
+
+function insert_msg()
+{
+  
+  //alert($("#text_msg").val() + $('#wbs_no').text() + session.EmployeeId + session.TitleFullName + session.FirstName + " " + session.LastName)
+  var formdata = new FormData()
+  formdata.append('wbs',$('#wbs_no').text())
+  formdata.append('u_number',session.EmployeeId)
+  formdata.append('u_name',session.TitleFullName + session.FirstName + " " + session.LastName)
+  formdata.append('msg',$("#text_msg").val())
+  $.ajax({
+      url: 'api/insert_msg_api.php',
+      method: 'POST',
+      data:formdata,
+      async: true,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+                  console.log('success')
+              },
+      complete :function(){
+                query_msg()
+                document.getElementById("text_msg").value=''
+                }					
+      });
+}
+
+function query_msg()
+{
+  var msg_card = document.getElementById("msg_area")
+  msg_card.innerHTML = ''
+  var formdata = new FormData()
+  formdata.append('wbs',$('#wbs_no').text())
+  $.ajax({
+      url: 'api/query_msg_api.php',
+      method: 'POST',
+      data:formdata,
+      async: true,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+                  var obj = JSON.parse(response)
+                  if(obj.length == 0 )
+                  {
+                    $('#row_msg').hide()
+                  }
+                  else if(obj.length > 0 )
+                  {
+                    $('#row_msg').show()
+                    var i = 0
+                    while(obj[i])
+                    {
+                      render_msg(obj[i].u_name,obj[i].datetime,obj[i].msg)  
+                      i++
+                    }
+                  }
+                  
+                  
+              }				
+      });
+}
+
+function render_msg(u_name,datetime,msg)
+{
+    var msg_card = document.getElementById("msg_area")
+    msg_card.innerHTML = msg_card.innerHTML + '<div class="card shadow mt-1"><div class="card-body"><span class="font-weight-bold"><i class="fas fa-user"></i> ' + u_name + '</span> <span class="text-success"><i class="fas fa-clock" aria-hidden="true"></i> ' + datetime + '</span><br><span class="text-info"><i class="fas fa-comment-dots"></i> ' + msg + '</span></div></div>' 
+}
+
+
+$("#job_detail").on('shown.bs.modal', function(){
+  query_msg();
+ });
+
+ $("#job_detail").on('hide.bs.modal', function(){
+  var msg_card = document.getElementById("msg_area")
+  msg_card.innerHTML = ''
+  $('#row_msg').hide()
+ });

@@ -70,3 +70,7 @@
                         margin-left: -25px;
                         margin-top: -25px;
                                 }
+    .msg {
+                height:250px;
+                overflow-y: scroll;
+            }                          
