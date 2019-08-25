@@ -93,12 +93,27 @@ function insert_msg()
       cache: false,
       processData: false,
       contentType: false,
+      beforeSend : function()
+            {
+                $('#row_msg').block({
+                  message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div>',
+                  overlayCSS : { 
+                    backgroundColor: '#ffffff',
+                    opacity: 1
+                  },
+                  css : {
+                    opacity: 1,
+                    border: 'none',
+                  }
+                });
+            },
       success: function(response) {
                   console.log('success')
               },
       complete :function(){
-                query_msg()
-                document.getElementById("text_msg").value=''
+                        $('#row_msg').unblock()        
+                        query_msg()
+                        document.getElementById("text_msg").value=''
                 }					
       });
 }
@@ -117,6 +132,20 @@ function query_msg()
       cache: false,
       processData: false,
       contentType: false,
+      beforeSend : function()
+            {  
+              $('#row_msg').block({
+                  message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div>',
+                  overlayCSS : { 
+                    backgroundColor: '#ffffff',
+                    opacity: 1
+                  },
+                  css : {
+                    opacity: 1,
+                    border: 'none',
+                  }
+                });
+            },
       success: function(response) {
                   var obj = JSON.parse(response)
                   if(obj.length == 0 )
@@ -132,10 +161,11 @@ function query_msg()
                       render_msg(obj[i].u_name,obj[i].datetime,obj[i].msg)  
                       i++
                     }
-                  }
-                  
-                  
-              }				
+                  } 
+              },
+        complete :function(){
+                                $('#row_msg').unblock()        
+                        }					
       });
 }
 
