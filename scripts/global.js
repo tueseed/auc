@@ -251,8 +251,29 @@ function query_data(peacode)
 function render_card_value(data)
 {
     var status = {C1:"กำลังก่อสร้าง",D1:"แล้วเสร็จ-ตรวจสอบพัสดุ",D2:"แล้วเสร็จทางเทคนิค",D3:"รับเอกสารปิด กส.",F2:"ปิด กส.ทางบัญชีระดับ WBS"}
+    var bg_color = ''
+    if(data.user_status == 'C1')
+    {
+        bg_color = '#ffcc00'
+    }
+    else if(data.user_status == 'D1')
+    {
+        bg_color = '#ffff00'
+    }
+    else if(data.user_status == 'D2')
+    {
+        bg_color = '#ffff66'
+    }
+    else if(data.user_status == 'D3')
+    {
+        bg_color = '#ccff33'
+    }
+    else if(data.user_status == 'F2')
+    {
+        bg_color = '#33cc33'
+    }
     var card = document.getElementById("data_area")
-    card.innerHTML = card.innerHTML + '<div class="col-lg-3"><div class="card mt-3 bg-primary shadow text-white border-primary"><div class="card-body"><h5 class="card-title">' + data.user_status +' '+status[data.user_status]+'</h5><div class="float-right font-weight-bold"><h5 class="card-title"><i class="fas fa-folder-open"></i> '+ data.num_wbs +' งาน</h5><h5 class="card-title"><i class="far fa-money-bill-alt"></i>  ' + data.val + ' ล้านบาท</h5></div></div></div></div>'
+    card.innerHTML = card.innerHTML + '<div class="col-lg-3"><div class="card mt-3 shadow text-dark" style="background-color:'+bg_color+';"><div class="card-body"><h5 class="card-title">' + data.user_status +' '+status[data.user_status]+'</h5><div class="float-right font-weight-bold"><h5 class="card-title"><i class="fas fa-folder-open"></i> '+ data.num_wbs +' งาน</h5><h5 class="card-title"><i class="far fa-money-bill-alt"></i>  ' + data.val + ' ล้านบาท</h5></div></div></div></div>'
 }
 query_data('')
     
