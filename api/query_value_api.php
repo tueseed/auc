@@ -14,7 +14,9 @@
                 WHERE 
 	                ba 
                 LIKE 
-	                '$peacode%' 
+                    '$peacode%'
+                AND
+                    wbs LIKE 'C-6%' 
                 GROUP BY 
                     user_status
                 ORDER BY

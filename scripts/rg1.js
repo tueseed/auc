@@ -27,7 +27,7 @@ function textnumberFormatter(value, row, index)
 }
 function textpercentFormatter(value, row, index) 
 {
-  //   var per = parseFloat(value);
+  var per = parseFloat(value);
   return "<div class='text-center'>" + per.toFixed(2) + "</div>";
 }
 
@@ -72,6 +72,8 @@ function query_job(wbs)
                   $('#act_value').html(numberWithCommas(obj[0].act))
                   $('#tech_n').html(obj[0].tech_name)
                   $('#tech_i').html(obj[0].tech_id)
+                  $('#analy_d').html(obj[0].analy_date)
+                  $('#per_f').html(obj[0].per)
               }				
       });
 }
@@ -227,3 +229,13 @@ $("#job_detail").on('shown.bs.modal', function(){
   msg_card.innerHTML = ''
   $('#row_msg').hide()
  });
+
+
+ 
+$('#tbl_data').on('load-success.bs.table', function () {
+  $('#tbl_data').bootstrapTable('hideColumn', 'ba')
+  $('#tbl_data').bootstrapTable('hideColumn', 'office_name')
+  $('#tbl_data').bootstrapTable('hideColumn', 'tech_name')
+  $('#tbl_data').bootstrapTable('hideColumn', 'tech_id')
+  $('#tbl_data').bootstrapTable('hideColumn', 'network')
+})
