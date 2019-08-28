@@ -92,7 +92,7 @@
               </button>
         </div>
         <div class="float-right">
-              <a class="btn btn-sm btn-outline-primary" href="#" id="exp_btn">
+              <a class="btn btn-sm btn-outline-primary" href="spreadsheet.php?office=" id="exp_btn">
                 <i class="fas fa-file-excel" aria-hidden="true"></i>
                 Export
               </a>

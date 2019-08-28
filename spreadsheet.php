@@ -18,7 +18,11 @@
                 postg_date,
                 DATEDIFF(now(),postg_date) AS day_now,
                 percent,
-                
+                (COALESCE(act_labor,0)+COALESCE(act_control,0)+COALESCE(act_tran,0)+COALESCE(act_general,0))/
+                (COALESCE(p_labor,0)+COALESCE(p_cocntrol,0)+COALESCE(p_tran,0)+COALESCE(p_general,0))*100 AS per,
+                act,
+                tech_name,
+                tech_id
             FROM 
                 tbl_job
             WHERE
@@ -34,8 +38,18 @@
 
     // cell value
     $spreadsheet->getActiveSheet()->setCellValue('A1', 'รหัสการไฟฟ้า');
-    $spreadsheet->getActiveSheet()->setCellValue('B1', 'องค์ประกอบ WBS');
-    $spreadsheet->getActiveSheet()->setCellValue('C1', 'คำอธิบายงาน');
+    $spreadsheet->getActiveSheet()->setCellValue('B1', 'หน่วยงาน');
+    $spreadsheet->getActiveSheet()->setCellValue('C1', 'องค์ประกอบ WBS');
+    $spreadsheet->getActiveSheet()->setCellValue('D1', 'คำอธิบาย');
+    $spreadsheet->getActiveSheet()->setCellValue('E1', 'สถานะผู้ใช้');
+    $spreadsheet->getActiveSheet()->setCellValue('F1', 'วันที่เบิกของครั้งแรก');
+    $spreadsheet->getActiveSheet()->setCellValue('G1', 'จำนวนวัน');
+    $spreadsheet->getActiveSheet()->setCellValue('H1', 'ค่าแรง(%)');
+    $spreadsheet->getActiveSheet()->setCellValue('I1', 'ค่าใช้จ่ายหน้างาน(%)');
+    $spreadsheet->getActiveSheet()->setCellValue('J1', 'ค่าพัสดุ+ค่าใช้จ่ายหน้างาน');
+    $spreadsheet->getActiveSheet()->setCellValue('K1', 'ผู้ควบคุมงาน');
+    $spreadsheet->getActiveSheet()->setCellValue('L1', 'รหัสพนักงาน');
+    
 
 
 
@@ -49,6 +63,10 @@
     //     ->setFormatCode(
     //         \PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_NUMBER_COMMA_SEPARATED1
     //     );
+    $spreadsheet->getActiveSheet()->getStyle('A1:L1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('ffff00');
+
+
+
 
     $writer = new Xlsx($spreadsheet);
     
