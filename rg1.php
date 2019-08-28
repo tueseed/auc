@@ -1,3 +1,6 @@
+ <div class="row ml-2 mr-2">
+  <span class="text-primary font-weight-bold" style="font-size:36px;">สถานะงานก่อสร้าง ที่ยังไม่ปิดงานเกิน 180 วัน นับจากวันเบิกพัสดุครั้งแรก</span>
+ </div>
  <div class="row ml-2 mr-2" id="data_area">
   <!-- <div class="col-lg-3">
     <div class="card mt-2">
@@ -62,18 +65,21 @@
             <thead>
               <tr>
               <th data-field="wbs" data-sortable="true" data-formatter="job_detail">#</th> 
-              <th data-field="ba" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> รหัสการไฟฟ้า</th>
               <th data-field="wbs" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> WBS</th>
               <th data-field="description" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-info"></i> คำอธิบาย</th>
-              <th data-field="office_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-house-damage"></i> หน่วยงาน</th>
               <th data-field="user_status" data-sortable="true" data-formatter="text_user_sts"><i class="fas fa-user"></i> สถานะผู้ใช้</th>
-              <th data-field="network" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> โครงข่าย</th>
               <th data-field="postg_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-calendar-day"></i> วันที่เบิกของครั้งแรก</th>
               <th data-field="day_now" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> จำนวนวัน</th>
+              <th data-field="analy_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> วันที่วิเคราะห์</th>
               <th data-field="percent" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-percent"></i></i> ค่าแรง</th>
+              <th data-field="per" data-sortable="true" data-formatter="textpercentFormatter"><i class="far fa-money-bill-alt"></i> ค่าใช้จ่ายหน้างาน(%)</th>
+              <th data-field="act" data-sortable="true" data-formatter="textnumberFormatter"><i class="far fa-money-bill-alt"></i> ค่าพัสดุ+ค่าใช้จ่ายหน้างาน</th>
+              <th data-field="ba" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> รหัสการไฟฟ้า</th>
+              <th data-field="office_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-house-damage"></i> หน่วยงาน</th>
+              <th data-field="network" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> โครงข่าย</th>
               <th data-field="tech_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-user"></i> ผู้ควบคุมงาน</th>
               <th data-field="tech_id" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> รหัสพนักงาน</th>
-              <th data-field="act" data-sortable="true" data-formatter="textnumberFormatter"><i class="far fa-money-bill-alt"></i> ค่าใช้จ่าย</th>
+              
               </tr>
             </thead>
           </table>
@@ -106,22 +112,25 @@
           <div class='modal-body'>
             <div class="row text-success font-weight-bold">
               <div class="col-lg-4">
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="ba" value="ba" onclick="col(this.value)" checked/>&nbsp;รหัสการไฟฟ้า</label>
                 <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="wbs" value="wbs" onclick="col(this.value)" checked/>&nbsp;WBS</label> 
                 <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="description" value="description" onclick="col(this.value)" checked/>&nbsp;คำอธิบาย</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="office_name" value="office_name" onclick="col(this.value)" checked/>&nbsp;หน่วยงาน</label>
-              </div>
-              <div class="col-lg-4">
                 <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="user_status" value="user_status" onclick="col(this.value)" checked/>&nbsp;สถานะผู้ใช้</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="network" value="network" onclick="col(this.value)" checked/>&nbsp;เลขที่โครงข่าย</label>
                 <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="postg_date" value="postg_date" onclick="col(this.value)" checked/>&nbsp;วันที่เบิกของครั้งแรก</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="day_now" value="day_now" onclick="col(this.value)" checked/>&nbsp;จำนวนวัน</label> 
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="day_now" value="day_now" onclick="col(this.value)" checked/>&nbsp;จำนวนวัน</label>
               </div>
               <div class="col-lg-4">
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="percent" value="percent" onclick="col(this.value)" checked/>&nbsp;ค่าแรง(%)</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_name" value="tech_name" onclick="col(this.value)" checked/>&nbsp;ชื่อ-สกุล</label>
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_id" value="tech_id" onclick="col(this.value)" checked/>&nbsp;รหัสพนักงาน</label> 
-                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="act" value="act" onclick="col(this.value)" checked/>&nbsp;ค่าใช้จ่ายจริง</label> 
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="percent" value="percent" onclick="col(this.value)" checked/>&nbsp;ค่าแรง(%)</label>
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="per" value="per" onclick="col(this.value)" checked/>&nbsp;ค่าใช้จ่ายหน้างาน(%)</label> 
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="act" value="act" onclick="col(this.value)" checked/>&nbsp;ค่าใช้จ่ายจริง</label>
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="ba" value="ba" onclick="col(this.value)"/>&nbsp;รหัสการไฟฟ้า</label>
+                 
+              </div>
+              <div class="col-lg-4">
+              <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="office_name" value="office_name" onclick="col(this.value)"/>&nbsp;หน่วยงาน</label>
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_name" value="tech_name" onclick="col(this.value)" />&nbsp;ชื่อ-สกุล</label>
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="tech_id" value="tech_id" onclick="col(this.value)" />&nbsp;รหัสพนักงาน</label>
+                <label class="dropdown-item text-success font-weight-bold" ><input type="checkbox" id="network" value="network" onclick="col(this.value)" />&nbsp;เลขที่โครงข่าย</label> 
+                 
               </div>      
             </div> 
           </div>                  
@@ -150,22 +159,30 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <p class="font-weight-bold">วันที่เบิกของครั้งแรก :</p>
                 <p class="font-weight-bold text-success" id="f_date"></p>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <p class="font-weight-bold">จำนวนวัน :</p>
                 <p class="font-weight-bold text-success" id="num_day"></p>
               </div>
+              <div class="col-lg-6">
+                <p class="font-weight-bold">วันที่วิเคราะห์ :</p>
+                <p class="font-weight-bold text-success" id="analy_d"></p>
+              </div>
             </div>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-3">
                 <p class="font-weight-bold">ค่าแรง(%) :</p>
                 <p class="font-weight-bold text-success" id="labor"></p>
               </div>
+              <div class="col-lg-3">
+                <p class="font-weight-bold">ค่าใช้จ่ายหน้างาน(%) :</p>
+                <p class="font-weight-bold text-success" id="per_f"></p>
+              </div>
               <div class="col-lg-6">
-                <p class="font-weight-bold">ค่าใช้จ่ายจริง :</p>
+                <p class="font-weight-bold">ค่าพัสดุ+ค่าใช้จ่ายหน้างาน :</p>
                 <p class="font-weight-bold text-success" id="act_value"></p>
               </div>
             </div>

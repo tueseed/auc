@@ -27,7 +27,7 @@ function textnumberFormatter(value, row, index)
 }
 function textpercentFormatter(value, row, index) 
 {
-  //   var per = parseFloat(value);
+  var per = parseFloat(value);
   return "<div class='text-center'>" + per.toFixed(2) + "</div>";
 }
 
@@ -72,6 +72,8 @@ function query_job(wbs)
                   $('#act_value').html(numberWithCommas(obj[0].act))
                   $('#tech_n').html(obj[0].tech_name)
                   $('#tech_i').html(obj[0].tech_id)
+                  $('#analy_d').html(obj[0].analy_date)
+                  $('#per_f').html(obj[0].per)
               }				
       });
 }
@@ -80,42 +82,49 @@ function insert_msg()
 {
   
   //alert($("#text_msg").val() + $('#wbs_no').text() + session.EmployeeId + session.TitleFullName + session.FirstName + " " + session.LastName)
-  var formdata = new FormData()
-  formdata.append('wbs',$('#wbs_no').text())
-  formdata.append('u_number',session.EmployeeId)
-  formdata.append('u_name',session.TitleFullName + session.FirstName + " " + session.LastName)
-  formdata.append('msg',$("#text_msg").val())
-  $.ajax({
-      url: 'api/insert_msg_api.php',
-      method: 'POST',
-      data:formdata,
-      async: true,
-      cache: false,
-      processData: false,
-      contentType: false,
-      beforeSend : function()
-            {
-                $('#row_msg').block({
-                  message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div>',
-                  overlayCSS : { 
-                    backgroundColor: '#ffffff',
-                    opacity: 1
-                  },
-                  css : {
-                    opacity: 1,
-                    border: 'none',
-                  }
-                });
-            },
-      success: function(response) {
-                  console.log('success')
+  if($("#text_msg").val() == "")
+  {
+    alert("กรุณาระบุข้อความ")
+  }
+  else
+  {
+    var formdata = new FormData()
+    formdata.append('wbs',$('#wbs_no').text())
+    formdata.append('u_number',session.EmployeeId)
+    formdata.append('u_name',session.TitleFullName + session.FirstName + " " + session.LastName)
+    formdata.append('msg',$("#text_msg").val())
+    $.ajax({
+              url: 'api/insert_msg_api.php',
+              method: 'POST',
+              data:formdata,
+              async: true,
+              cache: false,
+              processData: false,
+              contentType: false,
+              beforeSend : function()
+              {
+                  $('#row_msg').block({
+                    message: '<div class="spinner-border text-primary display-4" style="width: 4rem; height: 4rem;" role="status"><span class="sr-only">Loading...</span></div>',
+                    overlayCSS : { 
+                      backgroundColor: '#ffffff',
+                      opacity: 1
+                    },
+                    css : {
+                      opacity: 1,
+                      border: 'none',
+                    }
+                  });
               },
-      complete :function(){
-                        $('#row_msg').unblock()        
-                        query_msg()
-                        document.getElementById("text_msg").value=''
-                }					
-      });
+              success: function(response) {
+                          console.log('success')
+                      },
+              complete :function(){
+                                $('#row_msg').unblock()        
+                                query_msg()
+                                document.getElementById("text_msg").value=''
+                        }					
+            });
+  }
 }
 
 function query_msg()
@@ -220,3 +229,13 @@ $("#job_detail").on('shown.bs.modal', function(){
   msg_card.innerHTML = ''
   $('#row_msg').hide()
  });
+
+
+ 
+$('#tbl_data').on('load-success.bs.table', function () {
+  $('#tbl_data').bootstrapTable('hideColumn', 'ba')
+  $('#tbl_data').bootstrapTable('hideColumn', 'office_name')
+  $('#tbl_data').bootstrapTable('hideColumn', 'tech_name')
+  $('#tbl_data').bootstrapTable('hideColumn', 'tech_id')
+  $('#tbl_data').bootstrapTable('hideColumn', 'network')
+})
