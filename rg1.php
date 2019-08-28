@@ -81,8 +81,15 @@
       <div class="card-footer">
         <div class="float-left">
               <button class="btn btn-sm btn-outline-primary" href="#" title="Like" data-toggle="modal"  data-target="#column_modal">
+              <i class="fa fa-check-square"></i>
                 คอลัมน์
               </button>
+        </div>
+        <div class="float-right">
+              <a class="btn btn-sm btn-outline-primary" href="#" id="exp_btn">
+                <i class="fas fa-file-excel" aria-hidden="true"></i>
+                Export
+              </a>
         </div>
       </div>  
     </div>

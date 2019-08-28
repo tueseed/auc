@@ -219,6 +219,9 @@ function table_refresh(peacode)
      $table.bootstrapTable('refreshOptions', {
         url: './api/datatable/job_api.php?peacode=' + peacode
       })
+
+    $("#exp_btn").attr('href','spreadsheet.php?office='+peacode)
+    $("#exp_btn").attr('target','blank')
 }
 
 function query_data(peacode)
