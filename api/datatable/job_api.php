@@ -15,7 +15,7 @@
             LIKE
                 '$peacode%'
             AND
-                wbs LIKE 'C-6%'"; //// ซ่อน F2 ไปก่อน
+                wbs  NOT LIKE 'C-5%'"; //// ซ่อน F2 ไปก่อน
         //     WHERE 
         //     office_name LIKE '%$pea_name%'";
     $query_case = mysqli_query($conn,$sql);

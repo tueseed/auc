@@ -16,7 +16,7 @@
                 LIKE 
                     '$peacode%'
                 AND
-                    wbs LIKE 'C-6%' 
+                    wbs NOT LIKE 'C-5%' 
                 GROUP BY 
                     user_status
                 ORDER BY
