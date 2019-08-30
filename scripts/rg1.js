@@ -74,6 +74,22 @@ function query_job(wbs)
                   $('#tech_i').html(obj[0].tech_id)
                   $('#analy_d').html(obj[0].analy_date)
                   $('#per_f').html(obj[0].per)
+                  $('#p_mat').html(numberWithCommas(obj[0].p_mat))
+                  $('#p_mat_in').html(numberWithCommas(obj[0].p_mat_in))
+                  $('#p_labor').html(numberWithCommas(obj[0].p_labor))
+                  $('#p_tran').html(numberWithCommas(obj[0].p_tran))
+                  $('#p_general').html(numberWithCommas(obj[0].p_general))
+                  $('#p_operate').html(numberWithCommas(obj[0].p_operate))
+                  $('#p_tc').html(numberWithCommas(obj[0].p_tc))
+
+                  $('#act_mat').html(numberWithCommas(obj[0].act_mat))
+                  $('#act_mat_in').html(numberWithCommas(obj[0].act_mat_in))
+                  $('#act_labor').html(numberWithCommas(obj[0].act_labor))
+                  $('#act_tran').html(numberWithCommas(obj[0].act_tran))
+                  $('#act_general').html(numberWithCommas(obj[0].act_general))
+                  $('#act_operate').html(numberWithCommas(obj[0].act_operate))
+                  console.log(obj[0].act_operate)
+                  $('#act_tc').html(numberWithCommas(obj[0].ac_tc))
               }				
       });
 }

@@ -1,7 +1,9 @@
           </div> <!-- end of content col's class tag -->
         </div> <!-- end of row's class tag -->
       </div> <!-- end of container -->
-      <div id="mySidenav" class="sidenav shadow">
+     
+    </main> <!-- end of main tag -->
+    <div id="mySidenav" class="sidenav shadow">
             <a class="cls_menu" onclick="closeNav()">
               <span class="dotcls" onclick="closeNav()"style="cursor:pointer"></span>
             </a>
@@ -27,6 +29,5 @@
           <a class="menu" onclick="openNav()" id="left_menu">
               <span class="dot" onclick="openNav()"style="cursor:pointer"></span>
           </a>
-    </main> <!-- end of main tag -->
   </body>
 </html>

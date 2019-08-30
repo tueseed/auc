@@ -70,7 +70,7 @@
               <th data-field="user_status" data-sortable="true" data-formatter="text_user_sts"><i class="fas fa-user"></i> สถานะผู้ใช้</th>
               <th data-field="postg_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-calendar-day"></i> วันที่เบิกของครั้งแรก</th>
               <th data-field="day_now" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> จำนวนวัน</th>
-              <th data-field="analy_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> วันที่วิเคราะห์</th>
+              <!-- <th data-field="analy_date" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> วันที่วิเคราะห์</th> -->
               <th data-field="percent" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-percent"></i></i> ค่าแรง</th>
               <th data-field="per" data-sortable="true" data-formatter="textpercentFormatter"><i class="far fa-money-bill-alt"></i> ค่าใช้จ่ายหน้างาน(%)</th>
               <th data-field="act" data-sortable="true" data-formatter="textnumberFormatter"><i class="far fa-money-bill-alt"></i> ค่าพัสดุ+ค่าใช้จ่ายหน้างาน</th>
@@ -79,6 +79,24 @@
               <th data-field="network" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-sort-numeric-down"></i> โครงข่าย</th>
               <th data-field="tech_name" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas fa-user"></i> ผู้ควบคุมงาน</th>
               <th data-field="tech_id" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> รหัสพนักงาน</th>
+              <!--  -->
+              <!-- <th data-field="p_mat" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าพัสดุ</th>
+              <th data-field="p_mat_in" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าพัสดุเข้างาน</th>
+              <th data-field="p_labor" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าแรง</th>
+              <th data-field="p_control" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าควบคุมงาน</th>
+              <th data-field="p_tran" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าขนส่ง</th>
+              <th data-field="p_general" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าเบ็ดเตล็ด</th>
+              <th data-field="p_operate" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ประมาณการค่าดำเนินการ</th>
+              <th data-field="p_tc" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าแผน Time Confirm</th>
+              <th data-field="act_mat" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าพัสดุเบิกจริง</th>
+              <th data-field="act_mat_in" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าพัสดุเข้างานเบิกจริง</th>
+              <th data-field="act_labor" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าแรงเบิกจริง</th>
+              <th data-field="act_control" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าควบคุมงานเบิกจริง</th>
+              <th data-field="act_tran" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าขนส่งเบิกจริง</th>
+              <th data-field="act_general" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าเบ็ดเตล็ดเบิกจริง</th>
+              <th data-field="act_operate" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> ค่าดำเนินงานเบิกจริง</th>
+              <th data-field="ac_tc" data-sortable="true" data-formatter="textCenterFormatter"><i class="fas  fa-sort-numeric-down"></i> บันทึก Time Confirm</th> -->
+              <!--  -->
               
               </tr>
             </thead>
@@ -150,57 +168,102 @@
           <div class='modal-body'>
             <div class="row">
               <div class="col-lg-6">
-                <p class="font-weight-bold" >คำอธิบายงาน :</p>
-                <p class="font-weight-bold text-success" id="des"></p>
+                <span class="font-weight-bold" >คำอธิบายงาน :</span>
+                <span class="font-weight-bold text-success" id="des"></span>
               </div>
               <div class="col-lg-6">
-                <p class="font-weight-bold">สถานะผู้ใช้ :</p>
-                <p class="font-weight-bold text-success" id="user"></p>
+                <span class="font-weight-bold">สถานะผู้ใช้ :</span>
+                <span class="font-weight-bold text-success" id="user"></span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-3">
-                <p class="font-weight-bold">วันที่เบิกของครั้งแรก :</p>
-                <p class="font-weight-bold text-success" id="f_date"></p>
-              </div>
-              <div class="col-lg-3">
-                <p class="font-weight-bold">จำนวนวัน :</p>
-                <p class="font-weight-bold text-success" id="num_day"></p>
+            <div class="row mt-2">
+              <div class="col-lg-6">
+                <span class="font-weight-bold">วันที่เบิกของครั้งแรก :</span>
+                <span class="font-weight-bold text-success" id="f_date"></span>
               </div>
               <div class="col-lg-6">
+                <span class="font-weight-bold">จำนวนวัน :</span>
+                <span class="font-weight-bold text-success" id="num_day"></span>
+              </div>
+              <!-- <div class="col-lg-6">
                 <p class="font-weight-bold">วันที่วิเคราะห์ :</p>
                 <p class="font-weight-bold text-success" id="analy_d"></p>
-              </div>
+              </div> -->
             </div>
-            <div class="row">
-              <div class="col-lg-3">
-                <p class="font-weight-bold">ค่าแรง(%) :</p>
-                <p class="font-weight-bold text-success" id="labor"></p>
+            <div class="row mt-2">
+              <div class="col-lg-2">
+                <span class="font-weight-bold">ค่าแรง(%) :</span>
+                <span class="font-weight-bold text-success" id="labor"></span>
               </div>
-              <div class="col-lg-3">
-                <p class="font-weight-bold">ค่าใช้จ่ายหน้างาน(%) :</p>
-                <p class="font-weight-bold text-success" id="per_f"></p>
+              <div class="col-lg-4">
+                <span class="font-weight-bold">ค่าใช้จ่ายหน้างาน(%) :</span>
+                <span class="font-weight-bold text-success" id="per_f"></span>
               </div>
               <div class="col-lg-6">
-                <p class="font-weight-bold">ค่าพัสดุ+ค่าใช้จ่ายหน้างาน :</p>
-                <p class="font-weight-bold text-success" id="act_value"></p>
+                <span class="font-weight-bold">ค่าพัสดุ+ค่าใช้จ่ายหน้างาน :</span>
+                <span class="font-weight-bold text-success" id="act_value"></span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-3">
-                <p class="font-weight-bold">ผู้ควบคุมงาน :</p>
-                <p class="font-weight-bold text-success" id="tech_n"></p>
+            <div class="row mt-2">
+              <div class="col-lg-12">
+                <span class="font-weight-bold">การเบิกจ่าย :</span>
+                <table class="table table-bordered table-sm">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>#</th>
+                      <th>ค่าพัสดุ</th>
+                      <th>ค่าพัสดุเข้างาน</th>
+                      <th>ค่าแรง</th>
+                      <th>ค่าขนส่ง</th>
+                      <th>ค่าเบ็ตเตล็ด</th>
+                      <th>ค่าดำเนินการ</th>
+                      <th>Time Confirm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>แผน</td>
+                      <td id="p_mat"></td>
+                      <td id="p_mat_in"></td>
+                      <td id="p_labor"></td>
+                      <td id="p_tran"></td>
+                      <td id="p_general"></td>
+                      <td id="p_operate"></td>
+                      <td id="p_tc"></td>
+                      
+                    </tr>
+                    <tr>
+                      <td>จริง</td>
+                      <td id="act_mat"></td>
+                      <td id="act_mat_in"></td>
+                      <td id="act_labor"></td>
+                      <td id="act_tran"></td>
+                      <td id="act_general"></td>
+                      <td id="act_operate"></td>
+                      <td id="act_tc"></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="col-lg-3">
-                <p class="font-weight-bold">รหัสพนักงาน :</p>
-                <p class="font-weight-bold text-success" id="tech_i"></p>
+            </div>
+            <div class="row mt-2">
+              <div class="col-lg-6">
+                <span class="font-weight-bold">ผู้ควบคุมงาน :</span>
+                <span class="font-weight-bold text-success" id="tech_n"></span>
               </div>
               <div class="col-lg-6">
-                <p class="font-weight-bold">สังกัด :</p>
-                <p class="font-weight-bold text-success" id="head_of"></p>
+                <span class="font-weight-bold">รหัสพนักงาน :</span>
+                <span class="font-weight-bold text-success" id="tech_i"></span>
+              </div>
+              
+            </div>
+            <div class="row mt-2">
+            <div class="col-lg-12">
+                <span class="font-weight-bold">สังกัด :</span>
+                <span class="font-weight-bold text-success" id="head_of"></span>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-2">
               <div class="col-lg-12">
                 <p class="font-weight-bold">ข้อความ :</p>
               </div>
